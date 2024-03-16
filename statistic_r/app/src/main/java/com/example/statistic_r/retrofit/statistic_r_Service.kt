@@ -7,4 +7,11 @@ interface statistic_r_Service {
     @GET("/api/car/fuel")
     // fun getFuelData(@Query("fuelType") fuelType: String, @Query("oilStatus") oilStatus: Int): Call<statistic_r_Response>
     fun getFuelData(): Call<statistic_r_Response>
+
+    @GET("/api/report")
+    fun getDriveReport(): Call<DriveReport>
+
+    @GET("/api/report/most")
+    fun getMostUser(): Call<MostUser>
+
 }
